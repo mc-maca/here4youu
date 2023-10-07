@@ -1,0 +1,927 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* START: THINGS THAT APPLY TO ALL PAGES */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	box-sizing: border-box;
+  }
+
+  html{
+	scroll-behavior:smooth;
+  }
+
+  @media (max-width: 75em) {
+	html {
+	  font-size: 60%;
+	}
+  }
+  
+  @media (max-width: 61.25em) {
+	html {
+	  font-size: 58%;
+	}
+  }
+  
+  @media (max-width: 28.75em) {
+	html {
+	  font-size: 55%;
+	}
+  }
+
+
+/* top nav */
+
+.top-nav {
+	display: block;
+	justify-content: flex-end;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: #FEFCB2;
+	box-shadow: 0 2px 0 red;
+	z-index: 10;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+	.top-nav {
+		display: block;
+		justify-content: flex-end;
+		position: -webkit-sticky;
+		position: sticky;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: #FEFCB2;
+		box-shadow: 0 2px 0 red;
+		z-index: 10;
+  }
+  .top-nav-list a {
+	display: block;
+	font-size: 1rem;
+	padding: 1rem;
+	text-decoration: none;
+  }
+}
+
+
+
+  .top-nav ul {
+	list-style: none;
+	text-align: center;
+ }
+ 
+ .top-nav ul li {
+	color: red;
+	display: inline-block;
+ }
+
+  .top-nav-list a {
+	display: block;
+	font-size: 1rem;
+	padding: 1rem;
+	text-decoration: none;
+  }
+
+  .blood-button{
+	border: none;
+    background-color: transparent;
+    margin: 0em;
+	margin-top: -1em;
+	z-index: 5
+}
+
+.blood-button :hover{
+	text-decoration: none; 
+	cursor: pointer;
+}
+
+a.nav-list{
+	text-decoration: none; 
+	color:#ACFF9D;
+	cursor: pointer;
+  }
+
+  a:visited{
+	text-decoration: none; 
+	color: inherit
+  }
+  
+  a:hover{
+	text-decoration: none; 
+	color: inherit;
+	color:rgb(95, 255, 255);
+	cursor: pointer;
+  }
+
+  a:active{
+	text-decoration: none; 
+	color:purple;
+	cursor: pointer;
+  }
+
+  a{
+	color: inherit;
+  }
+
+
+  .blood-mode .top-nav {
+	display: block;
+	justify-content: flex-end;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: red;
+	box-shadow: 0 2px 0 red;
+	z-index: 10;
+  }
+
+  .blood-mode .top-nav ul li {
+	color: black;
+	display: inline-block;
+ }
+
+ .light-mode .top-nav {
+	display: block;
+	justify-content: flex-end;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: #FEFCB2;
+	box-shadow: 0 2px 0 red;
+	z-index: 10;
+  }
+
+  .light-mode .top-nav ul li {
+	color: red;
+	display: inline-block;
+ }
+
+  /* end top nav */
+
+
+	/* START: BOTTOM NEWS REEL */
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: #aef58d;
+	text-align: center;
+	z-index: 8;
+	box-shadow: 0 2px 0 red;
+  }
+
+ /* (A) FIXED WRAPPER */
+ .hwrap {
+	overflow: hidden; /* HIDE SCROLL BAR */
+	background: #aef58d;
+	color:red;
+	font-size: 17px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  }
+
+  @media only screen and (max-width: 600px) {
+	.hwrap {
+		background: #aef58d;
+		color:red;
+		font-size: 15px;
+		padding-bottom: 3px;
+		padding-top: 3px;
+		font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  }
+}
+
+  .blood-mode .hwrap {
+	overflow: hidden; /* HIDE SCROLL BAR */
+	background: rgb(25, 25, 25);
+	color:red;
+	font-size: 17px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  }
+
+ .light-mode .hwrap {
+	overflow: hidden; /* HIDE SCROLL BAR */
+	background: #aef58d;
+	color:red;
+	font-size: 17px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  }
+
+
+   
+  /* (B) MOVING TICKER WRAPPER */
+  .hmove { display: flex; 
+}
+  
+  /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+  .hitem {
+	flex-shrink: 0;
+	width: 80%;
+
+	padding: 9px;
+	text-align: center;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  }
+
+  @media only screen and (max-width: 600px) {
+	.hitem {
+		flex-shrink: 0;
+		width: 110%;
+		box-sizing: border-box;
+		padding: 10px;
+		text-align: center;
+		font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  }
+}
+   
+  /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+  /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+  @keyframes tickerh {
+	0% { transform: translate3d(100%, 0, 0); }
+	100% { transform: translate3d(-500%, 0, 0); }
+  }
+  .hmove { animation: tickerh linear 65s infinite; }
+  .hmove:hover { animation-play-state: paused; }
+
+
+  /* END: BOTTOM NEWS REEL */
+
+
+
+
+
+
+
+/* END: THINGS THAT APPLY TO ALL PAGES */
+
+
+
+
+
+
+
+/* S  T  A  R  T     H  O  M  E     P  A  G  E */
+
+.home-body{
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  	background: linear-gradient(60deg, #ACFF9D, rgb(251, 0, 255)) no-repeat center center fixed;
+  	margin-bottom: 200px;
+	min-height: 666px;
+	overflow-x: hidden;
+}
+
+.light-mode .home-body{
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  	background: linear-gradient(60deg, #ACFF9D, rgb(251, 0, 255)) no-repeat center center fixed;
+  	margin-bottom: 200px;
+	min-height: 666px;
+	overflow-x: hidden;
+}
+
+.blood-mode .home-body{	
+    background: url(file:///Users/michaelmacaulay/Documents/here4you/art1-bg2-dark.png) no-repeat center center fixed;
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+#banner-toggle{
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	width: 50%;
+    height: auto;
+	padding-top: 70px;
+	margin-top: 5px;
+	z-index: 7;
+}
+
+@media only screen and (max-width: 600px) {
+	#banner-toggle {
+		position: relative;
+		display: grid;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+		padding-top: 70px;
+		margin-top: 10px;
+		z-index: 7;
+  }
+}
+
+#byline{
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	color: #ACFF9D;
+	font-size: 1.1vw;
+	min-width: 500px;
+	margin-top: -5px;
+	z-index: 1;
+}
+
+.blood-mode #byline{
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-size: 1.1vw;
+	min-width: 500px;
+	margin-top: -5px;
+	z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+	#byline {
+		position: relative;
+		display: grid;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		color: #ACFF9D;
+		font-size: 3vw;
+		margin-top: -5px;
+		z-index: 1;
+  }
+
+  .blood-mode #byline{
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	color: rgb(255, 255, 255);
+	font-size: 3vw;
+	margin-top: -5px;
+	z-index: 1;
+}
+}
+
+div{
+	display: flex;
+	justify-content: center 
+}
+
+#main-character{
+	display: grid;
+	position: relative;
+	margin: 0 auto;
+	width: 40%;
+    height: auto;
+    min-width: 40%;
+	margin-top: -10px;
+	z-index: 8;
+}
+
+@media only screen and (max-width: 600px) {
+	#main-character {
+		position: relative;
+		display: grid;
+		margin: 0 auto;
+		width: 80%;
+		height: auto;
+		margin-top: -10px;
+		z-index: 8;
+  }
+
+}
+
+
+
+/* END HOME PAGE */
+
+
+/* END HISTORY PAGE */
+
+.history-page{
+	background: url(file:///Users/michaelmacaulay/Documents/here4you/cloud-bg.png) no-repeat center center;
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	min-height: 1300px;
+	margin-top: -200px;
+	padding-top: 5%;
+	
+}
+
+#about-text{
+	background-color: rgb(13, 144, 196);
+	color: #ACFF9D;
+	height: auto;
+	margin: 0 auto;
+	font-size: 1.3em;
+	text-align: center;
+	max-width: 50%;
+}
+
+
+
+
+/* END HISTORY PAGE */
+
+
+/* START ENDO PAGE */
+
+.art1-body{
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background: url(file:///Users/michaelmacaulay/Documents/here4you/endo-bg2.png) no-repeat center center fixed;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	min-height: 500px;
+	overflow-x: hidden;
+}
+
+#art1-scroll{
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	padding-top: 7%;
+	padding-bottom: 7%;
+	width: 40%;
+	height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+	#art1-scroll {
+		position: relative;
+		display: grid;
+		margin: 0 auto;
+		width: 90%;
+		height: auto;
+  }
+}
+
+#scroll-text{
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 25%;
+	font-size: 1.3vw;
+	color: #783D3D;
+}
+
+@media only screen and (max-width: 600px) {
+	#scroll-text {
+		position: absolute;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 45%;
+		font-size: 3vw;
+		color: #783D3D;
+  }
+}
+
+.endo-list{
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.endo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 4rem;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 6rem;
+  }
+
+
+	.endo-grid {
+	  grid-template-rows: 1fr;
+	}
+
+  .endo-image {
+	height: 100%;
+	width: 100%;
+	height: 420px;
+	width: 420px;
+	object-fit: cover;
+	opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .endo-image:hover {
+	opacity: 1;
+  }
+
+
+/* END ENDO PAGE */
+
+
+
+
+/* START MURAL PAGE */
+
+.art2-body{
+	background: url(file:///Users/michaelmacaulay/Documents/here4you/art1-bg.png) no-repeat center center fixed;
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	overflow-x: hidden;
+}
+
+	.blood-mode .art2-body{	
+  		background: url(file:///Users/michaelmacaulay/Documents/here4you/art1-bg2-dark.png) no-repeat center center fixed;
+		-moz-background-size: cover;
+    	-webkit-background-size: cover;
+    	-o-background-size: cover;
+    	background-size: cover;
+		font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	}
+
+#mural-banner{
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	padding: 10%;
+	padding-bottom: 0%;
+}
+
+@media only screen and (max-width: 600px) {
+	#mural-banner {
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	width: 122%;
+	height: auto;
+	max-width: 115%;
+	}
+
+	#art2-main{
+		position: relative;
+		display: grid;
+		margin: 0 auto;
+		width: 60%;
+		min-width: 60%;
+
+	}
+  }
+
+#art2-main{
+	position: relative;
+	display: grid;
+	margin: 0 auto;
+	width: 23%;
+    height: auto;
+    min-width: 23%;
+	}
+
+ 
+	  /* "Automagic" image grid using no media queries */
+	  .mural-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-gap: 2rem;
+		width: 100%;
+		max-width: 1300px;
+		margin: 0 auto;
+		margin-bottom: 6rem;
+		margin-top: 4rem;
+	  }
+	  
+	  @media (max-width: 30.625em) {
+		.mural-section {
+		  padding: 6rem 1rem;
+		}
+	  
+		.mural-grid {
+		  grid-template-columns: 1fr;
+		}
+	  }
+	
+	  .mural-image {
+		height: 100%;
+		width: 100%;
+		height: 600px;
+		width: 400px;
+		object-fit: cover;
+		opacity: .75;
+		transition: opacity .5s ease-in-out;
+	  }
+
+	  .mural-image:hover{
+		opacity: 1;
+	  }
+
+/* END MURAL PAGE */
+
+
+
+/* START RESOURCES SECTION */
+
+.art3-body{
+	background: url(file:///Users/michaelmacaulay/Documents/here4you/2-bg.png) no-repeat center center;
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	min-height: 666px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+	.art3-body{
+		background: url(file:///Users/michaelmacaulay/Documents/here4you/2-bg.png) no-repeat center center;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+		min-height: 444px;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+
+	.list-item{
+		display: grid;
+		position: relative;
+		font-size: 1.7em;
+		padding: 5%;
+	}
+
+}
+
+.list-item{
+	display: grid;
+	position: relative;
+	font-size: 1.7em;
+}
+
+#resources1 {
+	
+	text-align: center;
+	margin: 0 auto;
+	padding: 10%;
+	rotate: 11deg;
+
+}
+
+#resources2 {
+	text-align: center;
+	margin: 0 auto;
+	padding: 7%;
+	rotate: -13deg;
+
+}
+
+#resources3 {
+	text-align: center;
+	margin: 0 auto;
+	padding: 7%;
+	rotate: -4deg;
+
+}
+
+#resources4 {
+	text-align: center;
+	margin: 0 auto;
+	padding: 10%;
+	rotate: 7deg;
+}
+
+ul{
+	list-style: none;
+}
+
+/* END RESOURCES SECTION */
+
+
+/* START CHINA SECTION */
+
+.art4-body{
+	background: url(file:///Users/michaelmacaulay/Documents/here4you/art5bg1.png) no-repeat center center;
+	display: grid;
+	position: relative;
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	min-height: 1400px;
+	height: auto;
+	width: auto;
+	overflow-x: hidden;
+}
+
+.blood-mode .art4-body{
+	background: url(file:///Users/michaelmacaulay/Documents/here4you/art5bg-bm.png) no-repeat center center;
+	display: block;
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	height: 1400px;
+	overflow: auto;
+}
+
+@media only screen and (max-width: 600px) {
+	.art4-body {
+		display: none;
+  }
+}
+
+/* END CHINA SECTION */
+
+
+/* START INSTA 2 SECTION */
+
+.projects-section {
+	text-align: center;
+	padding: 10rem 2rem;
+	background: linear-gradient(60deg, #7bff64, rgb(255, 255, 0)) no-repeat center center fixed;
+	margin-top: -200px;
+  }
+
+.blood-mode .projects-section{
+	background: url(file:///Users/michaelmacaulay/Documents/here4you/art1-bg2-dark.png) no-repeat center center fixed;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;;
+}
+  
+  .projects-section-header {
+	max-width: 640px;
+	max-height: 500px;
+	margin: 0 auto 6rem auto;
+  }
+
+  .blood-mode #visit-page{
+	color: red;
+  }
+  
+  @media (max-width: 28.75em) {
+	.projects-section-header {
+	  font-size: 4rem;
+	}
+  }
+  
+  /* "Automagic" image grid using no media queries */
+  .projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 4rem;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 6rem;
+  }
+  
+  @media (max-width: 28.75em) {
+	.projects-section {
+	  padding: 6rem 1rem;
+	}
+  
+	.projects-grid {
+	  grid-template-columns: 1fr;
+	}
+  }
+
+  .project-image {
+	height: 100%;
+	width: 100%;
+	height: 400px;
+	width: 400px;
+	object-fit: cover;
+	opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .project-image:hover {
+	opacity: 1;
+  }
+  
+  .btn {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: 2px;
+  }
+  
+  .btn-show-all {
+	color: red;
+	font-size: 2rem;
+
+  }
+  
+
+/* END INSTA 2 SECTION */
+
+
+
+.story-share {
+	text-align: center;
+	padding: 10rem 2rem;
+	background: linear-gradient(60deg, #fdff95, rgb(19, 201, 6)) no-repeat center center fixed;
+  }
+
+
+
+
+/* START: SYSTEM PREFERENCE DARK MODE (NOT BLOOD MODE) */
+
+ @media (prefers-color-scheme: dark) {
+
+	.home-body, .projects-section, .art2-body{
+		background: url(file:///Users/michaelmacaulay/Documents/here4you/art1-bg2-dark.png) no-repeat center center fixed;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;;
+	}
+
+
+	.art4-body{
+		background: url(file:///Users/michaelmacaulay/Documents/here4you/art5bg-bm.png) no-repeat center center;
+		display: block;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+		height: 1500px;
+		overflow: auto;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.art4-body {
+				display: none;
+		  }
+		}
+
+
+	.hwrap {
+		overflow: hidden; /* HIDE SCROLL BAR */
+		background: rgb(25, 25, 25);
+		color:red;
+		font-size: 17px;
+		font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	  }
+
+	  .top-nav {
+		display: block;
+		justify-content: flex-end;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: red;
+		box-shadow: 0 2px 0 red;
+		z-index: 10;
+	  }
+
+	  .top-nav ul li {
+		color: black;
+		display: inline-block;
+	 }
+	
+	}
+
+/* to cooperate with system pref dark mode you need to include !important
+	.banner-toggle{
+		background: url(file:///Users/michaelmacaulay/Documents/here4you/banner-light3.png) no-repeat center !important;
+	}
+*/
+
+/* END: SYSTEM PREFERENCE DARK MODE (NOT BLOOD MODE)*/
+
